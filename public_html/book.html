@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>book</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<section class="header">
+
+    <a href="home.html" class="logo"><img
+        src="images\logo1.png"
+        alt="SevenSeas logo"
+        class="logo"
+      />
+      <img
+        src="images\logo2.png"
+        alt="SevenSeas logo"
+        class="logo1"
+      /></a>
+
+   <nav class="navbar">
+      <a href="home.html">home</a>
+      <a href="about.html">about</a>
+      <a href="package.html">package</a>
+      <a href="book.html">book</a>
+   </nav>
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
+<!-- header section ends -->
+
+<div class="heading" style="background:url(images/header-bg-3.png) no-repeat">
+   <h1>book now</h1>
+</div>
+
+<div class="bookingSection">
+  <div class="info">
+    
+    <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+    <img src="images\flyer.jpg" style="height: 555px; width: 350px; padding-top: 0px ">
+    
+  </div>
+ <form  id="bk" name="bk" onsubmit="return validation(event);" style="position:absolute; top:70px;left:450px">
+
+    <h2 style="color: black">Book your dream trip</h2>
+    <ul class="noBullet">
+      <li>
+        <label for="Name"></label>
+        <input type="text" class="inputFields" id="Name" name="Name" placeholder="Name" value=""/>
+      </li>
+      <li>
+        <label for="PHONENUMBER:"></label>
+        <input type="tel" class="inputFields" id="phno" name="phno" placeholder="Phone number:" value="" />
+      </li>
+      <li>
+        <label for="email"></label>
+        <input type="email" class="inputFields" id="email" name="email" placeholder="Email" value="" style="text-transform: lowercase;" />
+      </li>
+      <li>
+      <label for="Address"></label>
+      <input type="text" class="inputFields" id="add" name="add" placeholder="Enter address" value="" />
+      </li>
+     <li>
+        <label for="Tour"></label>
+        <input type="text" class="inputFields" id="tour" name="tour" placeholder="Tour name:" value=""/>
+      </li>
+    <li>
+
+<input list="People" name="People"  class="inputFields" placeholder="Number of People:" value="">
+<datalist id="People" >
+        <option value="1"> 1</option>
+        <option value="2"> 2</option>
+        <option value="3"> 3</option>
+        <option value="4"> 4</option>
+        <option value="5"> 5</option>
+</datalist>
+    </li>
+      <li id="center-btn">
+          <input type="submit" id="book-btn" name="book" value="Book"/> 
+      </li>
+    </ul>
+  </form>
+</div>
+    <div class="popup" id="popup">
+        <img src="images\done.png">
+        <h2> Thank You!</h2>
+        <p> Your booking is confirmed </p>
+       <button type="button" onclick="closePopup()">OK</button>
+    </div>
+
+  
+<script>
+const popup= document.querySelector("#popup");
+   function openPopup(){
+       popup.classList.add("open-popup");
+
+   }
+   function closePopup(){
+       popup.classList.remove("open-popup");
+   }
+function validation(e)
+{
+            e.preventDefault();
+var name=document.bk.Name.value;
+var contact=document.bk.phno.value;
+var email=document.bk.email.value;
+
+
+var atposition=email.indexOf("@");
+var dotposition=email.lastIndexOf(".");
+if (atposition< 1 || dotposition<atposition+2 || dotposition+2>=email.length){
+    alert("Please enter valid email id.");
+    return false;
+}
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+            return false;
+}
+if(contact==null || contact==""){
+    alert("please fill your contact number");
+    return false
+}
+if(email==null || email==""){
+    alert("please fill your email id");
+    return false
+}
+
+
+ popup.classList.add("open-popup");
+openPopup();
+}
+
+
+</script> 
+
+
+<section class="footer" style="padding-top: 250px">
+
+   <div class="box-container">
+
+      <div class="box">
+         <h3>quick links</h3>
+         <a href="home.html"> <i class="fas fa-angle-right"></i> home</a>
+         <a href="about.html"> <i class="fas fa-angle-right"></i> about</a>
+         <a href="package.html"> <i class="fas fa-angle-right"></i> package</a>
+         <a href="book.html"> <i class="fas fa-angle-right"></i> book</a>
+      </div>
+
+      <div class="box">
+         <h3>extra links</h3>
+         <a href="#"> <i class="fas fa-angle-right"></i> ask questions</a>
+         <a href="#"> <i class="fas fa-angle-right"></i> about us</a>
+         <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
+         <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
+      </div>
+
+        <div class="box">
+         <h3>contact info</h3>
+         <a href="#"> <i class="fas fa-phone"></i> +91 8097373130 </a>
+      
+         <a href="#"> <i class="fas fa-envelope"></i> nishthavsharma@gmail.com </a>
+         <a href="#"> <i class="fas fa-map"></i> mumbai, india - 400081 </a>
+      </div>
+
+      <div class="box">
+         <h3>follow us</h3>
+         <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+         <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+         <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+         <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+      </div>
+
+   </div>
+
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+<!-- swiper js link  
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+<script src="js/script.js"></script>
+
+ -->
+
+</body>
+</html>
