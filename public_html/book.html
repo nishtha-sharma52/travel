@@ -14,6 +14,7 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+  
 
 </head>
 <body>
@@ -104,10 +105,10 @@
         <p> Your booking is confirmed </p>
        <button type="button" onclick="closePopup()">OK</button>
     </div>
-
-  
-<script>
-const popup= document.querySelector("#popup");
+    <div id="mocha"></div>
+ 
+    <script>
+      const popup= document.querySelector("#popup");
    function openPopup(){
        popup.classList.add("open-popup");
 
@@ -146,10 +147,8 @@ if(email==null || email==""){
  popup.classList.add("open-popup");
 openPopup();
 }
-
-
-</script> 
-
+    </script>
+ 
 
 <section class="footer" style="padding-top: 250px">
 

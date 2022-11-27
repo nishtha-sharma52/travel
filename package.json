@@ -1,6 +1,17 @@
 {
-    "name": "Travel", "version": "1.0.0", "keywords": [
-        "util", "functional", "server", "client", "browser"
-    ], "author": "nisht", "contributors": [
-    ], "dependencies": {}
+    "name": "Travel",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "nisht",
+    "contributors": [],
+    "devDependencies": {
+        "chai": "^4.3.7",
+        "mocha": "^10.1.0"
+    }
 }
